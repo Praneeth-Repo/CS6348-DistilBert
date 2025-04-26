@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2025 at 05:14 AM
+-- Generation Time: Apr 26, 2025 at 03:52 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cs6314`
+-- Database: `cs6348`
 --
 
 -- --------------------------------------------------------
@@ -45,12 +45,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `userid`, `password`, `user_type`, `user_status`, `first_name`, `last_name`, `email`, `created_at`, `updated_at`) VALUES
-(1, 'admin1', '$2y$10$KhKk3OR0pYwS9.X4bR5UteWxDSYTlaG/BrI9s/7uq3SsSuT7RyV.6', 'admin', 'active', 'Admin', 'Name1', 'admin1@utdallas.edu', '2025-04-13 20:50:40', '2025-04-13 20:50:40'),
-(2, 'user2', '$2y$10$j4tJJeR.kt.i70/d3LWsg.Wy7BHyKINZPG1eKLeEhfxAxu6vcFQBa', 'user', 'active', 'User', 'Name2', 'user2@utdallas.edu', '2025-04-13 20:50:40', '2025-04-13 20:58:37'),
-(3, 'user3', '$2y$10$26ghggl2rLrUNMVTD047ROEEFkn61qv2Qa1BRSP.puGsHxPaMKIOK', 'user', 'active', 'User', 'Name3', 'user3@utdallas.edu', '2025-04-13 21:38:25', '2025-04-13 21:38:25'),
-(4, 'user4', '$2y$10$i5FGdkNhStyqmsh8MDmApuO8MRzGDKb3ABA8m3ZEvz4bMVMA0Hj8y', 'user', 'active', 'User', 'Name4', 'user4@utdallas.edu', '2025-04-13 21:40:08', '2025-04-13 21:40:08'),
-(6, 'user5', '$2y$10$Kj4vB6WoavNY24VoY9OGm.YUGpNOI44RRXMVJEY17OvA2C1v4N.yO', 'admin', 'active', 'Admin', 'Name5', 'admin5@utdallas.edu', '2025-04-13 21:44:43', '2025-04-13 21:44:43'),
-(7, 'user6', '$2y$10$DgpauJk58cFDD7V67wRQguYrTe6Qe2MM4IWCIYvExazgcjyAupiya', 'user', 'active', 'User', 'Name6', 'user6@utdallas.edu', '2025-04-13 21:57:17', '2025-04-13 21:57:17');
+(1, 'admin1', '$2y$10$7zk14AxT3S1Ov9hD7oMiaeGzo10UzAW4i5y/15/eUxua3zDAbNGnu', 'admin', 'active', 'Admin', 'Name1', 'admin1@utdallas.edu', '2025-04-13 22:23:00', '2025-04-13 22:23:00'),
+(2, 'user2', '$2y$10$JQoGQe3FvtOOkpORUppUk.gMg8N.KKL15J.L4IOG/KahkIS08V4Ym', 'user', 'active', 'User', 'Name2', 'user2@utdallas.edu', '2025-04-13 22:23:00', '2025-04-13 22:23:00'),
+(3, 'user3', '$2y$10$R2/o7Pe7Yyh672fBvvEQ3.uT7sWOOal8yhJmrwELsQdzCnj/ejWiO', 'user', 'active', 'User', 'Name3', 'user3@utdallas.edu', '2025-04-21 15:25:25', '2025-04-21 15:25:25'),
+(4, 'user4', 'user4', 'user', 'active', 'User', 'Name4', 'user4@utdallas.edu', '2025-04-21 17:50:15', '2025-04-21 17:50:15'),
+(5, 'praneeth', 'praneeth', 'user', 'active', 'Praneeth', 'Reddy', 'praneethpenamalli@gmail.com', '2025-04-25 12:12:44', '2025-04-25 12:12:44');
 
 --
 -- Indexes for dumped tables
@@ -71,7 +70,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
