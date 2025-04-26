@@ -1,25 +1,26 @@
-Vulnerable Login Page (No Protection)
+# Scenario 2: ML-Powered SQL Injection Detection (Without Prepared Statements)
 
-This example demonstrates a login system that is intentionally vulnerable to **SQL Injection (SQLi)** attacks.
+This login system uses a **DistilBERT-based machine learning model** to detect SQL Injection inputs before executing the query. However, it still uses a vulnerable query backend.
 
-## Purpose
+## Protection via ML Model
 
-To showcase how easily login credentials can be bypassed when:
-- No input sanitization is done
-- No prepared statements are used
+Inputs are scanned by `predict_sqli.py`, which loads `model.safetensors` trained on SQLi datasets. If the model detects a malicious pattern, access is blocked **before** the SQL query is executed.
 
-## How to Test
+## How it Works
 
-1. Start your Apache and MySQL (XAMPP/WAMP).
-2. Ensure you have a `user` table with at least one admin user.
-3. Open `login.php` in your browser.
-4. Try these payloads in the **userid** field (password can be anything):
-   - `admin' --`
-   - `' OR 1=1 --`
-   - `' OR 'a'='a`
+1. `authenticate.php` receives user input.
+2. Calls the Python script using `shell_exec()`.
+3. If the model flags the input as malicious (`1`), login is blocked.
+4. Otherwise, raw SQL query is executed (still vulnerable to SQLi if model fails).
 
-You should be able to log in without knowing the actual password.
+## ⚠Limitations
 
-## Warning
+- This is a hybrid approach with **machine learning but no traditional protection**.
+- If the model fails to detect a novel SQLi payload, the system is still vulnerable.
+- This code is **not recommended for production**, but useful for showcasing AI in security.
 
-This code is **not safe for production** and is only meant for academic or demo purposes to understand SQLi vulnerabilities.
+## Requirements
+
+- `transformers`, `datasets`, `evaluate`, `scikit-learn`, `torch`
+- `sql_injection_dataset.csv` for training (if retraining)
+- `model.safetensors` + tokenizer in `./sql_injection_model/`
