@@ -1,4 +1,4 @@
-# Scenario 2: ML-Powered SQL Injection Detection (Without Prepared Statements)
+# ML-Powered SQL Injection Detection (Without Prepared Statements)
 
 This login system uses a **DistilBERT-based machine learning model** to detect SQL Injection inputs before executing the query. However, it still uses a vulnerable query backend.
 
