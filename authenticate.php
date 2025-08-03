@@ -2,10 +2,7 @@
 session_start();
 
 // Database connection
-$mysqli = new mysqli("localhost", "root", "", "cs6314");
-if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
-}
+require_once "config.php";
 
 // Get raw inputs (unsanitized - intentionally vulnerable)
 $userid = isset($_POST['userid']) ? $_POST['userid'] : '';
@@ -43,7 +40,8 @@ if (isMalicious($userid) || isMalicious($password)) {
 
 //  VULNERABLE SQL QUERY (intentionally left unprotected)
 $query = "SELECT * FROM user WHERE userid = '$userid' AND password = '$password'";
-$result = $mysqli->query($query);
+$result = $conn->query($query);
+
 
 // Check login result
 if ($result && $result->num_rows >= 1) {
@@ -61,7 +59,8 @@ if ($result && $result->num_rows >= 1) {
 
     // Logging session (also intentionally vulnerable)
     $log_query = "INSERT INTO userlog (userid, session_id) VALUES ('{$user['userid']}', '{$_SESSION['session_id']}')";
-    $mysqli->query($log_query);
+    $conn->query($log_query);  
+
 
     // Redirect based on user type
     if ($user['user_type'] === 'admin') {

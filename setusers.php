@@ -1,8 +1,6 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "cs6314");
-if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
-}
+require_once "config.php";
+
 
 $users = [
     [
@@ -26,7 +24,7 @@ $users = [
 ];
 
 foreach ($users as $user) {
-    $stmt = $mysqli->prepare("INSERT INTO user (userid, password, user_type, user_status, first_name, last_name, email)
+    $stmt = $conn->prepare("INSERT INTO user (userid, password, user_type, user_status, first_name, last_name, email)
                               VALUES (?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param(
         "sssssss",

@@ -49,7 +49,8 @@ INSERT INTO `user` (`id`, `userid`, `password`, `user_type`, `user_status`, `fir
 (2, 'user2', '$2y$10$JQoGQe3FvtOOkpORUppUk.gMg8N.KKL15J.L4IOG/KahkIS08V4Ym', 'user', 'active', 'User', 'Name2', 'user2@utdallas.edu', '2025-04-13 22:23:00', '2025-04-13 22:23:00'),
 (3, 'user3', '$2y$10$R2/o7Pe7Yyh672fBvvEQ3.uT7sWOOal8yhJmrwELsQdzCnj/ejWiO', 'user', 'active', 'User', 'Name3', 'user3@utdallas.edu', '2025-04-21 15:25:25', '2025-04-21 15:25:25'),
 (4, 'user4', 'user4', 'user', 'active', 'User', 'Name4', 'user4@utdallas.edu', '2025-04-21 17:50:15', '2025-04-21 17:50:15'),
-(5, 'praneeth', 'praneeth', 'user', 'active', 'Praneeth', 'Reddy', 'praneethpenamalli@gmail.com', '2025-04-25 12:12:44', '2025-04-25 12:12:44');
+(5, 'praneeth', 'praneeth', 'user', 'active', 'Praneeth', 'Reddy', 'praneethpenamalli@gmail.com', '2025-04-25 12:12:44', '2025-04-25 12:12:44'),
+(6, 'heiton', 'heiton', 'user', 'active', 'heiton', 'z', 'heiton@gmail.com', '2025-06-25 12:12:44', '2025-06-25 12:12:44');
 
 --
 -- Indexes for dumped tables

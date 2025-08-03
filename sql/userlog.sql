@@ -82,7 +82,8 @@ INSERT INTO `userlog` (`id`, `userid`, `login_time`, `logout_time`, `session_id`
 (40, 'praneeth', '2025-04-25 20:09:32', NULL, 'hhl88p1e81qcm4q5blbqh9vela'),
 (41, 'praneeth', '2025-04-25 20:19:33', NULL, 'hhl88p1e81qcm4q5blbqh9vela'),
 (42, 'admin1', '2025-04-25 20:20:27', NULL, 'hhl88p1e81qcm4q5blbqh9vela'),
-(43, 'praneeth', '2025-04-25 20:21:09', NULL, 'hhl88p1e81qcm4q5blbqh9vela');
+(43, 'praneeth', '2025-04-25 20:21:09', NULL, 'hhl88p1e81qcm4q5blbqh9vela'),
+(44, 'heiton', '2025-04-25 20:21:09', NULL, 'hhl88p1e81qcm4q5blbqh9vela');;
 
 --
 -- Indexes for dumped tables
